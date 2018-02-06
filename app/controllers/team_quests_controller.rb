@@ -1,0 +1,2 @@
+class TeamQuestsController < ApplicationController
+end
