@@ -1,3 +1,3 @@
 class Quest < ApplicationRecord
-  belongs_to :location_id
+  belongs_to :location
 end
