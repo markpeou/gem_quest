@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :team_quests
-  resources :quests
-  resources :locations
-  resources :teams
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root to: '/', to: 'pages#home'
+
+  resources :locations, only: [:index, :show]
+  resources :quests, only: [:show]
 end
