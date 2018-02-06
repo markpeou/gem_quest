@@ -1,4 +1,4 @@
 class TeamQuest < ApplicationRecord
-  belongs_to :team_id
-  belongs_to :quest_id
+  belongs_to :team
+  belongs_to :quest
 end
