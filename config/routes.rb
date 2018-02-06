@@ -1,4 +1,4 @@
-
+Rails.application.routes.draw do  
   root to: '/', to: 'pages#home'
 
   resources :locations, only: [:index, :show]
@@ -10,5 +10,4 @@
 
   get '/login', to: 'sessions#new'
   post '/session', to: 'sessions#create'
-
 end
