@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+#logo{
+  height: 60px;
+  width: 60px;
+}
+
+.map-wrapper{
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}
