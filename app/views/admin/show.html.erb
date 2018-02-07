@@ -1,0 +1,19 @@
+<h2>Edit Quest</h2>
+
+<form action= "/show<%= @quest.id %>" method= "post">
+  <input type= "hidden" name= "_method" value= "put">
+
+  <label for= "">Instructions</label>
+  <input type= "text" value= "<%= @quest.instructions %>">
+
+  <label for= "">Answer</label>
+  <input type= "text" value= "<%= @quest.answer %>">
+
+  <label for="">Location: </label>
+  <input type="text" value = "<%= @quest.location_id %>">
+
+  <label for="">Point Value: </label>
+  <input type="text" value = "<%= @quest.point_value%>">
+  <button>Update</button>
+
+</form>

@@ -10,6 +10,12 @@
   </head>
 
   <body>
+
+    <header>
+      <h1 id='gemquest'>Gem Quest</h1>
+      <img id='logo' src="http://www.hsdtaxlaw.com/wp-content/uploads/2016/05/20140806_LogoSupporterPlaceholder.png" alt="">
+    </header>
+
     <nav>
       <% if logged_in? %>
         <form action="/logout" method="post">
@@ -21,6 +27,10 @@
     </nav>
 
     <%= yield %>
+
+    <footer>
+      Created by Mark, Jo
+    </footer>
 
   </body>
 
