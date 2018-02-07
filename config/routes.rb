@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/session', to: 'sessions#create'
 
+  delete '/logout', to: 'sessions#destroy'
 
-
-  root to: '/', to: 'pages#home'
+  root to: 'pages#home'
 
   resources :locations, only: [:index, :show]
   resources :quests, only: [:show]

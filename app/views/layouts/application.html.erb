@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>GemQuest</title>
     <%= csrf_meta_tags %>
@@ -9,6 +10,18 @@
   </head>
 
   <body>
+    <nav>
+      <% if logged_in? %>
+        <form action="/logout" method="post">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+          <input type="hidden" name="_method" value="delete">
+          <button>logout</button>
+        </form>
+      <% end %>
+    </nav>
+
     <%= yield %>
+
   </body>
+
 </html>
