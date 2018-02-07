@@ -6,9 +6,7 @@ class QuestsController < ApplicationController
 
   def checkAnswer
     answer = params[:answer_input]
-    if answer
-
-
+    
   end
 
   def new
