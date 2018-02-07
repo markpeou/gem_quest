@@ -1,5 +1,12 @@
 <h1>Locations Index</h1>
-<div id="zone1">
+
+
+<% @locations.each do |location| %>
+  <div>
+    <a href="/locations/<%=location.id%>"><h2><%= location.name %></h2></a>
+  </div>
+<% end %>
+<!-- <div id="zone1">
   <a class='location-link' href="/locations/1"> LOCATION 1 </a>
 </div>
 <div id="zone2">
@@ -13,4 +20,4 @@
 </div>
 <div id="bonus">
   <a class='location-link' href="/locations/5"> BONUS</a>
-</div>
+</div> -->

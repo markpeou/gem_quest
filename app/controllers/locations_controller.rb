@@ -1,7 +1,8 @@
 class LocationsController < ApplicationController
 
   def show
-    @location = Location.find(params[:id])
+    @location = Location.find_by(id: params[:id])
+    @quests = Quest.where(location_id: @location.id)
   end
 
   def index
