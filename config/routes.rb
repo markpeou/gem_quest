@@ -12,5 +12,5 @@ Rails.application.routes.draw do
 
   resources :locations, only: [:index, :show]
   resources :quests, only: [:show]
-
+  resources :admin, only: [:show, :edit, :delete]
 end
