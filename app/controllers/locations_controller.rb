@@ -1,8 +1,11 @@
 class LocationsController < ApplicationController
 
-  def index
+  def show
+    @location = Location.find(params[:id])
   end
 
-  def show
+  def index
+    @locations = Location.all
   end
+
 end
