@@ -189,16 +189,16 @@
 
   }
 
-  var locations = [
-    {lat: -37.8182711, lng: 144.9670618},
-    {lat: -37.817798, lng: 144.968714}]
+  // var locations = [
+  //   {lat: -37.8182711, lng: 144.9670618},
+  //   {lat: -37.817798, lng: 144.968714}]
 
 
-  //  var locations = [
-  // <%# @quests.each do |quest|%>
-  //   {lat: <%#= quest.id.latitude%> , lng: <%#=quest.id.longitude %>},
-  // <%# end %> 
-  //  ] 
+   var locations = [
+  <% @quests.each do |quest| %>
+    {lat: <%= quest.latitude%> , lng: <%=quest.longitude %>},
+  <% end %> 
+   ] 
 
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT54WwO2XSLwmeaRvNjQdamDP6pma-HQM&callback=initMap" async defer>
