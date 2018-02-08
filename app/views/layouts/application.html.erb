@@ -13,23 +13,24 @@
 
     <header>
       <h1 id='gemquest'>Gem Quest</h1>
-      <img id='logo' src="http://www.hsdtaxlaw.com/wp-content/uploads/2016/05/20140806_LogoSupporterPlaceholder.png" alt="">
-    </header>
+      <img id='logo' src="http://via.placeholder.com/60x60" alt="">
 
-    <nav>
-      <% if logged_in? %>
-        <form action="/logout" method="post">
-          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
-          <input type="hidden" name="_method" value="delete">
-          <button>logout</button>
-        </form>
-      <% end %>
-    </nav>
+      <nav>
+        <a href="/">Home</a>
+        <% if logged_in? %>
+          <form action="/logout" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+            <input type="hidden" name="_method" value="delete">
+            <button>logout</button>
+          </form>
+        <% end %>
+      </nav>
+    </header>
 
     <%= yield %>
 
     <footer>
-      Created by Mark, Jo
+      Created by Mark, Johanna & Sophie
     </footer>
 
   </body>

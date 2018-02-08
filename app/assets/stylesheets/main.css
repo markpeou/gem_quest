@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+#logo{
+  height: 60px;
+  width: 60px;
+}
+
+.map-wrapper{
+  height: 300px;
+  width: 300px;
+}
+
+#map {
+  height: 100%;
+}

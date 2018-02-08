@@ -1,23 +1,30 @@
 <h1>Locations Index</h1>
 
+<!-- google maps api div -->
+<div class="map-wrapper">
+  <div id="map"></div>
+</div>
+
 
 <% @locations.each do |location| %>
   <div>
     <a href="/locations/<%=location.id%>"><h2><%= location.name %></h2></a>
   </div>
 <% end %>
-<!-- <div id="zone1">
-  <a class='location-link' href="/locations/1"> LOCATION 1 </a>
-</div>
-<div id="zone2">
-  <a class='location-link' href="/locations/2"> LOCATION 2 </a>
-</div>
-<div id="zone3">
-  <a class='location-link' href="/locations/3"> LOCATION 3 </a>
-</div>
-<div id="zone4">
-  <a class='location-link' href="/locations/4"> LOCATION 4 </a>
-</div>
-<div id="bonus">
-  <a class='location-link' href="/locations/5"> BONUS</a>
-</div> -->
+
+<!-- google maps api script -->
+<script>
+  function initMap() {
+    var flindersStreet = {lat: -37.8182711, lng: 144.9670618};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 14,
+      center: flindersStreet
+    });
+    var marker = new google.maps.Marker({
+      position: flindersStreet,
+      map: map
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT54WwO2XSLwmeaRvNjQdamDP6pma-HQM&callback=initMap" async defer>
+</script>
