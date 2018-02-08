@@ -6,7 +6,9 @@
 </header> -->
 
 
-<h2> QUEST <%= @quest.id %> </h2>
+
+<h2> QUEST<%= @quest.id %> </h2>
+
 
 <!-- google maps api div -->
 
@@ -14,7 +16,7 @@
   <div id="map"></div>
 </div>
 
-<div class="task">
+<div class="quests">
   <p>
     Sticker located under bench
     Quest Value = <%= @quest.point_value%>
@@ -47,7 +49,3 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT54WwO2XSLwmeaRvNjQdamDP6pma-HQM&callback=initMap" async defer>
 </script>
-
-
-
-
