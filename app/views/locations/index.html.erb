@@ -1,17 +1,17 @@
-<h1>Locations Index</h1>
+<h2>Locations Index</h2>
 
 <!-- google maps api div -->
 <div class="map-wrapper">
   <div id="map"></div>
 </div>
 
-
-<% @locations.each do |location| %>
-  <div>
-    <a href="/locations/<%=location.id%>"><h2><%= location.name %></h2></a>
-  </div>
-<% end %>
-
+<div class="locations">
+  <% @locations.each do |location| %>
+    <div>
+      <a href="/locations/<%=location.id%>"><h2><%= location.name %></h2></a>
+    </div>
+  <% end %>
+</div>
 <!-- google maps api script -->
 
 <script>

@@ -5,32 +5,38 @@
     <title>GemQuest</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Alice|Raleway|Special+Elite" rel="stylesheet">
   </head>
 
   <body>
-
     <header>
-      <h1 id='gemquest'>Gem Quest</h1>
-      <img id='logo' src="http://via.placeholder.com/60x60" alt="">
-
-      <nav>
-        <a href="/">Home</a>
+      <h1>
+        Gem Quest
+      </h1>
+    </header>
+    <nav>
+      <h2>
+        <a id="home" href="/">Home</a>
         <% if logged_in? %>
-          <form action="/logout" method="post">
+          <form id='logout' action="/logout" method="post">
             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
             <input type="hidden" name="_method" value="delete">
             <button>logout</button>
           </form>
         <% end %>
-      </nav>
-    </header>
-
-    <%= yield %>
-
-    <footer>
-      Created by Mark, Johanna & Sophie
+      </h2>
+    </nav>
+    <main>
+      <%= yield %>
+    </main>
+    <footer class="clearfix">
+      <p class="copywrite">
+        Copyright 2018
+      </p>
+      <p class="message">Created with &hearts; by
+        <span class="name">Mark, Johanna & Sophie</span></p>
     </footer>
 
   </body>
