@@ -1,10 +1,35 @@
 * {
   box-sizing: border-box;
 }
+.app-wrapper {
+  align-content: center;
+  text-align: center;
+}
+
+header {
+
+}
+
+nav {
+
+}
 
 #logo{
   height: 60px;
   width: 60px;
+  border-radius: 90%;
+}
+
+h1 #gemquest{
+
+}
+
+a #home {
+
+}
+
+button #logout {
+
 }
 
 .map-wrapper{
@@ -13,4 +38,8 @@
 
 #map {
   height: 100%;
+}
+
+footer{
+
 }
