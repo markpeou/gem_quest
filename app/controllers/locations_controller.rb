@@ -6,6 +6,7 @@ class LocationsController < ApplicationController
   end
 
   def index
+    @quests = Quest.all
     @locations = Location.all
   end
 
