@@ -6,7 +6,9 @@
 </header> -->
 
 
-<h3> QUEST<%= @quest.id %> </h3>
+
+<h2> QUEST<%= @quest.id %> </h2>
+
 
 <!-- google maps api div -->
 
@@ -17,10 +19,15 @@
 <div class="quests">
   <p>
     Sticker located under bench
+    Quest Value = <%= @quest.point_value%>
   </p>
-  <form action="/show" method="post">
+
+  <form action="/quests/<%=@quest.id%>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
     <label for="">Enter your code: </label>
-    <input type="text" value="Your answer">
+    <input type="text" name="answer_input" value="">
+    <input type="hidden" name="quest_id" value="<%=@quest.id %>">
+    <input type="hidden" name="point_value" value="<%=@quest.point_value%>">
   <button>Submit</button>
 </form>
 
