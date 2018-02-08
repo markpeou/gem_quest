@@ -1,7 +1,7 @@
 <h2> LOCATION (<%= @location.name %>) </h2>
 <div class="locationquests">
   <% @quests.each do |quest| %>
-    <div>
+    <div class="locations-show-button-wrapper">
       <a href="/quests/<%=quest.id%>"><h2><%= quest.name %></h2></a>
     </div>
   <% end %>

@@ -1,6 +1,7 @@
 class QuestsController < ApplicationController
 
   def show
+    @quests = Quest.all
     @quest = Quest.find(params[:id])
   end
 

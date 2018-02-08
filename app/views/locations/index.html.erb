@@ -1,5 +1,3 @@
-<h2>Locations Index</h2>
-
 <!-- google maps api div -->
 <div class="map-wrapper">
   <div id="map"></div>
@@ -7,7 +5,7 @@
 
 <div class="locations">
   <% @locations.each do |location| %>
-    <div>
+    <div class="locations-index-button-wrapper">
       <a href="/locations/<%=location.id%>"><h2><%= location.name %></h2></a>
     </div>
   <% end %>
@@ -18,7 +16,7 @@
   function initMap() {
 
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 14,
+      zoom: 16,
       center: {lat: -37.8182711, lng: 144.9670618},
       styles: [
   {
@@ -197,9 +195,9 @@
 
 
   //  var locations = [
-  <%# @quests.forEach do |quest|%>
-  //   {lat: <%#= quest.id.lat%> , lng: <%#=quest.id.long %>},
-  <%# end %> 
+  // <%# @quests.each do |quest|%>
+  //   {lat: <%#= quest.id.latitude%> , lng: <%#=quest.id.longitude %>},
+  // <%# end %> 
   //  ] 
 
 </script>
