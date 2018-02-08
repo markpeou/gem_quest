@@ -7,7 +7,7 @@
 
 
 
-<h2> QUEST<%= @quest.id %> </h2>
+<!-- <h2> QUEST <%= @quest.id %> </h2> -->
 
 
 <!-- google maps api div -->
@@ -39,7 +39,7 @@
   function initMap() {
 
     var taskLocation = {lat: -37.8182711, lng: 144.9670618} 
-    // var taskLocation = {lat: <%#= @quest.lat%> , lng: <%#=@quest.long %>}
+    // var taskLocation = {lat: <%#= @quest.latitude%> , lng: <%#=@quest.longitude %>}
 
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 16,
