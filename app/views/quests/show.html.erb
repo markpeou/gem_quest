@@ -34,17 +34,21 @@
 </div>
 
 <!-- google maps api script -->
+
 <script>
   function initMap() {
-    var flindersStreet = {lat: -37.8182711, lng: 144.9670618};
+
+    var taskLocation = {lat: -37.8182711, lng: 144.9670618} 
+    // var taskLocation = {lat: <%#= @quest.lat%> , lng: <%#=@quest.long %>}
+
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 14,
-      center: flindersStreet
-    });
-    var marker = new google.maps.Marker({
-      position: flindersStreet,
+      zoom: 16,
+      center: taskLocation
+    })
+    var marker1 = new google.maps.Marker({
+      position: taskLocation,
       map: map
-    });
+    })
   }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT54WwO2XSLwmeaRvNjQdamDP6pma-HQM&callback=initMap" async defer>
