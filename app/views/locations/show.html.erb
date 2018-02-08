@@ -1,19 +1,8 @@
 <h2> LOCATION (<%= @location.name %>) </h2>
-
-<% @quests.each do |quest| %>
-  <div>
-    <a href="/quests/<%=quest.id%>"><h2><%= quest.name %></h2></a>
-  </div>
-<% end %>
-  <!-- <div id="quest1">
-    <a class='quest-link' href="/quests/1"> QUEST 1 </a>
-  </div>
-  <div id="quest2">
-    <a class='quest-link' href="/quests/2"> QUEST 2 </a>
-  </div>
-  <div id="quest3">
-    <a class='quest-link' href="/quests/3"> QUEST 3 </a>
-  </div>
-  <div id="quest4">
-    <a class='quest-link' href="/quests/4"> QUEST 4 </a>
-  </div> -->
+<div class="locationquests">
+  <% @quests.each do |quest| %>
+    <div>
+      <a href="/quests/<%=quest.id%>"><h2><%= quest.name %></h2></a>
+    </div>
+  <% end %>
+</div>
