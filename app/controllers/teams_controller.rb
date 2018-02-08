@@ -20,11 +20,13 @@ class TeamsController < ApplicationController
   end
 
   def index
-    @teams = Team.all 
+    @teams = Team.all
+    @teamquests = TeamQuest.all
   end
 
   def show
     @team = Team.find_by(id: params[:id])
   end
+
 
 end
