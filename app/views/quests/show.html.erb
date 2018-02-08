@@ -8,8 +8,10 @@
 
 <h2> QUEST<%= @quest.id %> </h2>
 
+<!-- google maps api div -->
+
 <div class="map-wrapper">
-<div id="map"></div>
+  <div id="map"></div>
 </div>
 
 <div class="quests">
@@ -26,13 +28,17 @@
 
 <!-- google maps api script -->
 <script>
-  var map;
   function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 8
+    var flindersStreet = {lat: -37.8182711, lng: 144.9670618};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 14,
+      center: flindersStreet
+    });
+    var marker = new google.maps.Marker({
+      position: flindersStreet,
+      map: map
     });
   }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT54WwO2XSLwmeaRvNjQdamDP6pma-HQM&callback=initMap" async defer>
 </script>

@@ -33,7 +33,8 @@ button #logout {
 }
 
 .map-wrapper{
-  height: 100%;
+  height: 300px;
+  width: 300px;
 }
 
 #map {
