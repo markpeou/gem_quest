@@ -6,7 +6,9 @@
 </header> -->
 
 
-<h3> QUEST<%= @quest.id %> </h3>
+
+<h2> QUEST<%= @quest.id %> </h2>
+
 
 <!-- google maps api div -->
 
@@ -17,27 +19,36 @@
 <div class="quests">
   <p>
     Sticker located under bench
+    Quest Value = <%= @quest.point_value%>
   </p>
-  <form action="/show" method="post">
+
+  <form action="/quests/<%=@quest.id%>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
     <label for="">Enter your code: </label>
-    <input type="text" value="Your answer">
+    <input type="text" name="answer_input" value="">
+    <input type="hidden" name="quest_id" value="<%=@quest.id %>">
+    <input type="hidden" name="point_value" value="<%=@quest.point_value%>">
   <button>Submit</button>
 </form>
 
 </div>
 
 <!-- google maps api script -->
+
 <script>
   function initMap() {
-    var flindersStreet = {lat: -37.8182711, lng: 144.9670618};
+
+    var taskLocation = {lat: -37.8182711, lng: 144.9670618} 
+    // var taskLocation = {lat: <%#= @quest.lat%> , lng: <%#=@quest.long %>}
+
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 14,
-      center: flindersStreet
-    });
-    var marker = new google.maps.Marker({
-      position: flindersStreet,
+      zoom: 16,
+      center: taskLocation
+    })
+    var marker1 = new google.maps.Marker({
+      position: taskLocation,
       map: map
-    });
+    })
   }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT54WwO2XSLwmeaRvNjQdamDP6pma-HQM&callback=initMap" async defer>

@@ -3,5 +3,6 @@
 <% @teams.each do |team| %>
   <div>
     <a href="/teams/<%=team.id%>"><h2><%= team.name %></h2></a>
+    <p><%= team.team_quests.pluck(:points_record).sum %></p>
   </div>
 <% end %>
