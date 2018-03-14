@@ -8,20 +8,23 @@ body {
 }
 
 header {
-  background-color: rgb(188, 38, 26);
+  background-color: #ff7575;
   color: #FFFFFF;
-  padding: 30px 20px 30px 20px;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  padding-left:20px;
+  padding-right: 20px;
 }
 
 nav {
   background-color: #00A6B3;
   color: #FFFFFF;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top:0.5%;
+  padding-bottom:0.5%;
 }
 
 h1 {
-  font-family: "Alice", sans-serif;
+  font-family: 'Gruppo', cursive;
   letter-spacing: 1px;
   font-weight: 400;
   font-size: 45px;
@@ -30,7 +33,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Special Elite', cursive;
+  font-family: 'Nova Mono', monospace;
   color: black;
   letter-spacing: 1px;
   font-weight: 600;
@@ -38,7 +41,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Special Elite', cursive;
+  font-family: 'Nova Mono', monospace;
   color: black;
   letter-spacing: 1px;
   font-weight: 600;
@@ -65,8 +68,9 @@ a:hover {
 }
 
 main {
-  width: 850px;
-  margin: 35px auto;
+  width: 100%;
+  height: 80%;
+  margin:auto;
 }
 
 img {
@@ -80,7 +84,9 @@ button #logout {}
 .map-wrapper {
   height: 300px;
   width: 300px;
-  margin-left: 300px;
+  margin-left: 37%;
+
+  /*margin-left: 300px;*/
 }
 
 #map {
@@ -90,7 +96,7 @@ button #logout {}
 .button-wrapper {
   text-align: center;
   width: 300px;
-  height: 50px;
+  height: 40px;
   border: none;
 }
 
@@ -98,7 +104,7 @@ footer {
   text-transform: uppercase;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: rgb(188, 38, 26);
+  background-color: #ff7575;
   color: white;
   font-size: 14px;
   letter-spacing: .08em;
@@ -127,4 +133,14 @@ footer {
 .name {
   color: #00A6B3;
   font-weight: 700;
+}
+
+.wrapper {
+  width: 150px;
+  margin-left: 41%;
+  background-color: black;
+}
+
+.quests {
+  font-family: 'Mallanna', sans-serif;
 }

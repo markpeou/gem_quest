@@ -1,13 +1,25 @@
 
 #begin {
-
+  font-family: 'Nova Mono', monospace;
   color: #009900;
   text-transform: uppercase;
   text-decoration: none;
   margin: 20px;
-  border-bottom: : 2px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
 #begin:hover {
 border-color: #009900;
+}
+
+.button-wrapper{
+  margin-left:50%;
+}
+
+li {
+font-family: 'Mallanna', sans-serif;
+list-style: none;
+text-align: center;
+font-size: 0.8em;
+
 }
