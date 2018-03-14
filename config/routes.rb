@@ -7,7 +7,13 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   post '/quests/:id', to: 'quests#check_answer'
-  #resources :team_quests
+
+  get '/quests/new', to: 'admins#new'
+  post '/quests', to: 'admins#create'
+
+  post '/quests/:id/edit', to: 'admins#update'
+
+  # resources :team_quests
   resources :teams
 
   resources :locations, only: [:index, :show]

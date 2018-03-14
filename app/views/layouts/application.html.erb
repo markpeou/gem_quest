@@ -7,7 +7,12 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<<<<<<< HEAD
     <link href="https://fonts.googleapis.com/css?family=Adamina|Quicksand" rel="stylesheet">
+=======
+    <link href="https://fonts.googleapis.com/css?family=Gruppo|Mallanna|Nova+Mono" rel="stylesheet">
+
+>>>>>>> admin_user
   </head>
 
   <body>
@@ -22,7 +27,12 @@
         <nav>
     <!--   <a href="/">home</a> -->
         <% if logged_in? %>
+<<<<<<< HEAD
           <form class="logout" action="/logout" method="post">
+=======
+        <p><%= @team %></p>
+          <form id='logout' action="/logout" method="post">
+>>>>>>> admin_user
             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
             <input type="hidden" name="_method" value="delete">
             <button class="fake-link">logout</button>

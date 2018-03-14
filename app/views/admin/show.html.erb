@@ -1,19 +1,55 @@
-<h2>Edit Quest</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
 
-<form action= "/show<%= @quest.id %>" method= "post">
-  <input type= "hidden" name= "_method" value= "put">
+    <div class="newQuest">
+      <form action="/quests/new" method= "post">
+        <label for="">Create New Quest: </label>
+        <input type="text" name="name" placeholder="Quest Name">
+        <input type="text" name="instructions" placeholder="Instructions">
+        <input type="text" name="answer" placeholder="Answer">
+        <input type="text" name="location_id" placeholder="Location Id">
+        <input type="text" name="latitude" placeholder="Latitude">
+        <input type="text" name="longitude" placeholder='Longitude'>
+        <input type="text" name="point_value" placeholder="Point Value">
+        <button>Create</button>
+      </form>
+    </div>
 
-  <label for= "">Instructions</label>
-  <input type= "text" value= "<%= @quest.instructions %>">
+    <h2>Edit Quest</h2>
 
-  <label for= "">Answer</label>
-  <input type= "text" value= "<%= @quest.answer %>">
+    <form action= "/quests/<%=quest.id%>/edit<%= @quest.id %>" method= "post">
+      <input type= "hidden" name= "_method" value= "put">
 
-  <label for="">Location: </label>
-  <input type="text" value = "<%= @quest.location_id %>">
+      <label for= "">Instructions</label>
+      <input type= "text" name="instructions" value= "<%= @quest.instructions %>">
 
-  <label for="">Point Value: </label>
-  <input type="text" value = "<%= @quest.point_value%>">
-  <button>Update</button>
+      <label for= "">Answer</label>
+      <input type= "text" name="answer" value= "<%= @quest.answer %>">
 
-</form>
+      <label for="">Location: </label>
+      <input type="text" name="location" value = "<%= @quest.location_id %>">
+
+
+      <label for="">Latitude: </label>
+      <input type="text" name="latitude" value= "<%= @quest.latitude%>">
+
+      <label for="">Longitude: </label>
+      <input type="text" name="longitude" value= "<% @quest.longitude %>">
+
+      <label for="">Point Value: </label>
+      <input type="text" name="point_value" value = "<%= @quest.point_value%>">
+      <button>Update</button>
+
+    </form>
+
+
+
+
+  </body>
+</html>

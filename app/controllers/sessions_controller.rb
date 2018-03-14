@@ -7,11 +7,16 @@ class SessionsController < ApplicationController
       redirect_to '/'
     else
       render :new
-    end  
+    end
   end
 
   def new
     redirect_to '/' if logged_in?
+  end
+
+  def show
+    @team = Team.find_by(id: params[:id])
+
   end
 
   def destroy
